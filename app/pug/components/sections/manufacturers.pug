@@ -1,0 +1,30 @@
+-
+  var manufacturers = [
+    { src: 'img/manufacturers-01.png', text: 'KBE' },
+    { src: 'img/manufacturers-02.png', text: 'Rehau' },
+    { src: 'img/manufacturers-03.png', text: 'VEKA' },
+    { src: 'img/manufacturers-04.png', text: 'Schuco' },
+    { src: 'img/manufacturers-05.png', text: 'AGS' },
+    { src: 'img/manufacturers-06.png', text: 'Provedal' },
+    { src: 'img/manufacturers-07.png', text: 'NorTec' },
+    { src: 'img/manufacturers-08.png', text: 'Океан' },
+    { src: 'img/manufacturers-09.png', text: 'Trocal' },
+    { src: 'img/manufacturers-10.png', text: 'Thyssen' },
+    { src: 'img/manufacturers-11.png', text: 'Novotex' },
+    { src: 'img/manufacturers-12.png', text: 'Caurus' }
+  ]
+
+.manufacturers
+  .container
+    if index
+      h2.manufacturers__header Цена ремонта окон <br>на 20% ниже конкурентов
+      p.manufacturers__subheader Сотрудничаем с производителями
+    else
+      h2.manufacturers__header Сотрудничаем с самыми известными производителя комплектующих:
+    .manufacturers-items
+      each item in manufacturers
+        .manufacturers__item
+          .manufacturers__item-image-part
+            img.manufacturers__item-image(src=item.src, alt=item.text)
+          .manufacturers__item-text-part= item.text
+// manufacturers

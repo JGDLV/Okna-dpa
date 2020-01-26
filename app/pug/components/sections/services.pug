@@ -1,0 +1,40 @@
+-
+  const services = [
+    {
+      src: 'img/services-01.png',
+      header: 'Защита окон от детей',
+      text: 'Устанавливаем замки, которые препятствуют полному открытию поворотно-откидных створок: ребенок может играть в проветриваемой комнате, а вы не беспокоиться за него',
+      price: 1000
+    },
+    {
+      src: 'img/services-02.png',
+      header: 'Сетки «Антикошка»',
+      text: 'Монтируем тонкие решетки из алюминия, стали или пластика, чтобы домашние животные не выпрыгнули на улицу или балкон. Ваш любимец не убежит, даже если никого не будет дома',
+      price: 1900
+    }
+  ]
+  
+  const list = [
+    { text: 'Минимальная сумма заказа с выездом специалиста и учетом стоимости материалов — <span>2500 рублей</span>' },
+    { text: 'Если стоянка платная, вы оплачиваете парковочное место для авто мастера по действующим тарифам' }
+  ]
+
+.services
+  .container
+    h2.services__header Дополнительные услуги оконного сервиса
+    .services-items
+      each item in services
+        .services__item
+          a.services__item-image-part(href="#")
+            img.services__item-image(src=item.src, alt="")
+          .services__item-text-part
+            p.services__item-header= item.header
+            p.services__item-text= item.text
+            .services__item-price
+              span.services__item-price-number.price от !{item.price} Р
+              span.services__item-price-for одно окно
+    h2.services__header Внимание:
+    ul.services-list
+      each item in list
+        li.services-list__item !{item.text}
+// services

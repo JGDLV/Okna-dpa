@@ -1,0 +1,34 @@
+-
+  const scheme = [
+    {
+      src: 'img/scheme-01.svg',
+      text: 'Выезд мастера на объект'
+    },
+    {
+      src: 'img/scheme-02.svg',
+      text: 'Консультация и определение причины поломки'
+    },
+    {
+      src: 'img/scheme-03.svg',
+      text: 'Расчет цены ремонта окон'
+    },
+    {
+      src: 'img/scheme-04.svg',
+      text: 'Заключение договора на обслуживание'
+    },
+    {
+      src: 'img/scheme-05.svg',
+      text: 'Внесение оплаты наличным или безналичным расчетом'
+    }
+  ]
+
+.scheme
+  .container
+    h2.scheme__header Схема работы по ремонту окон в Москве
+    .scheme-items
+      each item in scheme
+        .scheme__item
+          .scheme__item-image-part
+            img.scheme__item-image(src=item.src, alt="")
+          .scheme__item-text-part !{item.text}
+// scheme

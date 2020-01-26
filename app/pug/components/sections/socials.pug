@@ -1,0 +1,11 @@
+-
+  const socials = [
+    { class: 'fa-vk', href: '#' },
+    { class: 'fa-youtube', href: '#' },
+    { class: 'fa-facebook-f', href: '#' },
+    { class: 'fa-instagram', href: '#' }
+  ]
+
+.social
+  each item in socials
+    a.social__item.fab.a-drop(href=item.href class=item.class)

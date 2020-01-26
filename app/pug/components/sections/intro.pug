@@ -1,0 +1,24 @@
+-
+  const intro = [
+    { src: 'img/intro-01.png', text: 'Ремонт <br>пластиковых окон', price: '1100', },
+    { src: 'img/intro-02.png', text: 'Ремонт <br>деревянных окон', price: '1300', },
+    { src: 'img/intro-03.png', text: 'Ремонт <br>алюминиевых окон', price: '1800', },
+    { src: 'img/intro-04.png', text: 'Замена <br>стеклопакета', price: '5000', },
+    { src: 'img/intro-05.png', text: 'Москитные <br>сетки', price: '1000', },
+    { src: 'img/intro-06.png', text: 'Тонировка <br>окон', price: '1200', },
+    { src: 'img/intro-07.png', text: 'Аксессуары', price: '300', },
+  ]
+
+.intro
+  .container
+    h1.intro__header Ремонт окон в Москве за 1–3 дня
+    p.intro__subheader Гарантия на все виды работ до 3 лет
+    .intro-items
+      each item in intro
+        a.intro__item(href="#")
+          span.intro__item-image-part
+            img.intro__item-image(src=item.src, alt="")
+          span.intro__item-text-part
+            span.intro__item-text(href="#") !{item.text}
+            span.intro__item-price.price от !{item.price} Р
+// intro

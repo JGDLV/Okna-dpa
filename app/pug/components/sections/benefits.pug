@@ -1,0 +1,30 @@
+-
+  var benefits = [
+    {
+      src: 'img/benefits-01.svg',
+      header: 'Гарантия до 3 лет',
+      text: 'В зависимости от услуги вы получите бесплатное сервисное обслуживание на срок от 1 до 3 лет. Используем фирменные комплектующие для окон, которые можно заменить в течение 10 лет'
+    },
+    {
+      src: 'img/benefits-02.svg',
+      header: '1–3 дня на работы',
+      text: 'Реставрацией ваших стеклопакетов будут заниматься 6 мастеров с дипломами от производителей окон и фурнитуры. Они знают все тонкости работы, приедут к вам в удобное время'
+    },
+    {
+      src: 'img/benefits-03.svg',
+      header: 'Бесплатные замеры',
+      text: 'При заключении договора мастер проведет замеры в вашем доме. <br>Если вам нужна консультация, выезд специалиста по Москве стоит 500 рублей, за МКАД — от 1000 рублей'
+    }
+  ]
+
+.benefits
+  .container
+    .benefits-items
+      each item in benefits
+        .benefits__item
+          .benefits__item-image-part
+            img.benefits__item-image(src=item.src, alt="")
+          .benefits__item-text-part
+            p.benefits__item-header !{item.header}
+            p.benefits__item-text !{item.text}
+// benefits

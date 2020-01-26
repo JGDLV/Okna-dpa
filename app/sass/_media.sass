@@ -1,0 +1,365 @@
+@media (max-width: 1200px)
+  .main-header
+
+    &-top
+      padding: 15px 0
+
+      &__inner
+        align-items: center
+        justify-content: center
+        max-width: 650px
+        margin: auto
+
+        > *
+          margin: 10px 15px
+
+  .intro
+    padding: 30px 0
+
+  h1, h2, *[class*="subheader"]
+    line-height: normal !important
+
+  h1
+    font-size: 36px !important
+    margin-bottom: 7px !important
+
+  h2
+    font-size: 30px !important
+    margin-bottom: 7px !important
+
+  *[class*="subheader"]
+    font-size: 24px !important
+
+  .services
+    padding: 30px 0
+
+    &-items
+      margin: 30px 0
+
+    &-list
+      margin: 20px 0 0 0
+
+  .master
+    padding: 30px 0
+
+    &__header, &__subheader
+      text-align: center
+
+    &__text-part
+      max-width: 100%
+      text-align: center
+
+      br
+        display: none
+
+    &__image-part
+      display: none
+
+  .manufacturers
+    padding: 30px 0
+
+    &-items
+      justify-content: center
+
+    &__item
+      margin: 10px
+
+  .benefits
+    padding: 30px 0 !important
+
+    &__item
+      width: calc(100% / 3 - 15px)
+      text-align: center
+
+      &-header
+        max-width: 250px
+        margin: 10px auto 15px
+        line-height: 1.1
+
+      &-text
+        text-align: center
+
+        br
+          display: none
+
+  .order
+    padding: 30px 0
+    background-position: top right
+
+    &__button
+      margin-top: 15px
+      width: auto
+      padding: 0 20px
+
+    &__text-part
+      margin: 0 40px 0 auto
+
+    &__button
+      max-width: 100%
+
+  .scheme
+    padding: 30px 0
+
+    &-items
+      margin: 30px 0
+
+    &__item
+
+      &-text-part
+        font-size: 24px
+        line-height: 1.1
+        margin-top: -40px
+
+  .portfolio
+    padding: 30px 0
+
+    &-items
+      margin: 30px 0
+
+    &__item
+      width: calc(100% / 3 - 15px)
+
+      br
+        display: none
+
+      &-text
+        margin-bottom: 10px
+
+    &__link
+
+      span
+        line-height: 1.3
+
+  .feedback
+    padding: 30px 0
+
+    &__subheader
+      margin-bottom: 30px
+
+  .main-footer
+
+    &-top
+      padding: 30px 0
+
+      &__inner
+        justify-content: center
+
+    .logo
+      width: 100%
+      text-align: center
+      margin: 0 0 30px
+
+      br
+        display: none
+
+      & ~ *
+        margin: 10px 15px
+
+  .social
+    justify-content: center
+
+  .footer-menu_01
+    width: 180px
+
+  .footer-menu-items + .footer-menu-items
+    margin: 0
+
+  .inner .main-content
+    padding: 30px 0
+
+  .team
+    padding: 30px 0 0
+
+    &__item
+      width: calc(25% - 15px)
+
+  .inner .benefits__item-header
+    margin-bottom: 10px
+
+  .clients
+    padding: 30px 0 0
+
+    &__item
+      width: calc(100% / 3 - 15px)
+
+      &-image
+        max-width: 100%
+
+// 1200px
+
+@media (max-width: 1080px)
+  .services__item
+    padding: 30px
+
+    &-image-part
+      width: 100%
+
+    &-text-part
+      width: 100%
+      text-align: center
+
+// 1080px
+
+@media (max-width: 800px)
+  .team_items
+    margin-bottom: -30px
+
+  .team__item
+    width: calc(50% - 15px)
+    margin-bottom: 30px
+
+// 800px
+
+@media (max-width: 770px)
+  .feedback
+
+    &-form
+      justify-content: center
+
+      &__name, &__phone
+        width: calc(50% - 20px)
+        margin: 0 10px 20px
+
+// 770px
+
+@media (max-width: 700px)
+  h1, h2
+    font-size: 30px !important
+
+    br
+      display: none
+
+  .services-items
+    margin-bottom: 0
+
+  .services__item
+    width: 100%
+    margin-bottom: 30px
+
+  .benefits__item
+    width: 100%
+    margin-bottom: 30px
+
+    &-header
+      font-size: 20px
+      margin: 20px auto 10px
+
+    &:last-child
+      margin-bottom: 0
+
+  .portfolio__item
+    width: 100%
+    margin-bottom: 30px
+
+    &:last-child
+      margin-bottom: 0
+
+  .main-menu__link
+    font-size: 20px
+    line-height: 50px
+
+// 700px
+
+@media (max-width: 630px)
+  .logo__tagline
+    text-align: center
+
+  .search
+    display: none
+
+  .phones__text
+    padding: 0
+    display: block
+
+  .clients__item
+    width: 100%
+    margin-bottom: 30px
+
+    &:last-child
+      margin-bottom: 0
+
+    &-image
+      max-width: 270px
+
+// 630px
+
+@media (max-width: 600px)
+  .main-header-bottom
+
+    .container
+      padding: 0
+
+  .menu-toggle
+    display: flex
+    margin: 0 10px 0 auto
+    position: relative
+    z-index: 20
+
+  .main-menu
+    overflow: visible
+    padding: 10px 0
+    border-radius: 0
+
+  .main-menu-items
+    display: none
+    position: absolute
+    width: 100%
+    top: 0
+    background: $blue
+    padding: 10px 0
+
+// 600px
+
+@media (max-width: 500px)
+  .feedback-form__name, .feedback-form__phone
+    width: 270px
+    margin: 0 0 20px
+
+// 500px
+
+@media (max-width: 430px)
+  .intro__item
+    width: 130px
+    margin-left: 7.5px
+    margin-right: 7.5px
+
+  .manufacturers__item
+    width: calc(50% - 20px)
+    padding: 0 15px 15px
+
+  .order__text-part
+    margin: auto
+
+  .order__header
+    font-size: 24px !important
+    text-align: center
+
+    br
+      display: none
+
+  h1, h2
+    font-size: 24px !important
+
+    br
+      display: none
+
+  .portfolio__link
+    font-size: 24px
+
+  .team__item
+    width: 100%
+
+// 430px
+
+@media (max-width: 400px)
+  .order__button
+    line-height: 1.1 !important
+    padding: 10px 20px
+
+// 400px
+
+@media (max-width: 360px)
+  .footer-menu
+    width: 180px
+
+// 360px

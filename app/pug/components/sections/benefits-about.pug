@@ -1,0 +1,36 @@
+-
+  var benefits = {
+    header: 'В нашей компании по ремонту окон безошибочно диагностируют поломку',
+    subheader: 'И быстро ее устраняют',
+    items: [
+      {
+        src: 'img/hourglass.png',
+        header: '1–3 дня на работы',
+        text: 'При необходимости проведем срочный ремонт в течение 1–5 часов. Стоимость — 5000 рублей'
+      },
+      {
+        src: 'img/window.png',
+        header: '0 случаев брака',
+        text: 'За 12 лет работы не было случаев нарушения технологии монтажа нашими мастерами'
+      },
+      {
+        src: 'img/like.png',
+        header: '200 довольных клиентов',
+        text: '70% заказчиков обращаются к нам снова или рекомендуют услуги своим близким и друзьям'
+      }
+    ]
+  }
+
+.benefits
+  .container
+    h2.benefits__header !{benefits.header}
+    p.benefits__subheader !{benefits.subheader}
+    .benefits-items
+      each item in benefits.items
+        .benefits__item
+          .benefits__item-image-part
+            img.benefits__item-image(src=item.src, alt="")
+          .benefits__item-text-part
+            p.benefits__item-header !{item.header}
+            p.benefits__item-text !{item.text}
+// benefits

@@ -1,0 +1,909 @@
+$w: #ffffff
+$black: #000000
+$blue: #00acff
+$darkblue: #018ed2
+$yellow: #ffd800
+$bg: #f5f5f5
+$link: #7c7c7c
+  
+body
+  font-family: 'Harmonia', sans-serif
+  font-size: 18px
+  line-height: calc(20 / 18)
+  color: $black
+  font-weight: 400
+
+.container
+  max-width: 1200px
+  padding: 0 15px
+  margin: 0 auto
+
+.btn
+  display: block
+  text-align: center
+
+.main-header
+  background: url('../img/bg-header.png') top center no-repeat
+  background-size: cover
+  color: $w
+
+  &-top
+    padding: 29px 0 22px
+
+    &__inner
+      +flex
+      align-items: flex-start
+
+.logo
+  margin-right: 34px
+
+  &__link
+    color: $w
+
+  &__title
+    font-size: 36px
+    font-weight: 900
+    line-height: 1
+    text-transform: uppercase
+    display: block
+    margin-bottom: 3px
+
+  &__tagline
+    font-size: 14px
+    line-height: 15px
+    display: block
+
+.search
+  margin: 11px 28px 0 0
+
+  &-form
+    position: relative
+
+    &__input
+      background: $w
+      width: 270px
+      height: 40px
+      border-radius: 3px
+      padding: 0 40px 0 10px
+      color: $black
+
+      &::placeholder
+        color: $black
+
+    &__submit
+      width: 40px
+      height: 40px
+      position: absolute
+      top: 0
+      right: 0
+      border-radius: 3px
+      background: $w url('../img/icon-search.svg') no-repeat center
+
+.phones
+  margin: 4px 0 0 0
+
+  &__stage
+    margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__link
+    color: $w
+    font-weight: 700
+
+    &:hover
+      color: $yellow
+
+  &__text
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    color: #b3b7b9
+    padding-left: 8px
+
+  &__messenger
+    color: $w
+
+    &_whatsapp, &_viber
+      padding-left: 22px
+      position: relative
+
+      &::before
+        +pseudo
+        width: 19px
+        top: 0
+        left: -1px
+
+    &_whatsapp
+      margin-right: 8px
+
+      &::before
+        height: 18px
+        background: url('../img/icon-whatsapp-white.svg') no-repeat
+
+    &_viber
+
+      &::before
+        height: 19px
+        background: url('../img/icon-viber-white.svg') no-repeat
+
+.callback
+  width: 170px
+  height: 40px
+  border: 2px solid $w
+  color: $w
+  line-height: 36px
+  margin: 11px 0 0 auto
+  border-radius: 3px
+
+  &:hover
+    border-color: $blue
+
+  &::before, &::after
+    background: $blue
+
+.main-menu
+  background: $blue
+  border-radius: 3px
+  overflow: hidden
+  position: relative
+
+  &-items
+    +flex
+
+  &__item
+    flex-grow: 1
+
+  &__link
+    display: block
+    text-align: center
+    line-height: 60px
+    color: $w
+    font-size: 24px
+    font-weight: 700
+    position: relative
+    z-index: 10
+
+  &__hover
+    position: absolute
+    background: $darkblue
+    z-index: 0
+    +tr
+    opacity: 0
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    
+.intro
+  padding: 53px 0 50px
+  color: $w
+
+  &__header
+    font-size: 48px
+    font-weight: 900
+    line-height: 60px
+    text-transform: uppercase
+    text-align: center
+
+  &__subheader
+    font-size: 30px
+    font-weight: 700
+    text-align: center
+    margin-bottom: 44px
+
+  &-items
+    +flex
+    justify-content: center
+    align-items: flex-start
+    max-width: 800px
+    margin: auto
+
+  &__item
+    width: 170px
+    height: 200px
+    background: $w
+    border-radius: 3px
+    margin: 0 15px
+    color: $black
+    text-align: center
+    margin-bottom: 40px
+    position: relative
+
+    &:hover .intro__item-image
+      opacity: .75
+      +tr
+
+    &-image-part
+      height: 144px
+      +flex
+      align-items: center
+      justify-content: center
+
+    &-text
+      color: $black
+
+    &-price
+      position: absolute !important
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+
+.price
+  background: $yellow
+  position: relative
+  font-weight: 700
+  line-height: 30px
+  padding: 0 15px
+  border-radius: 3px
+  white-space: nowrap
+  display: inline-block
+
+  &::before, &::after
+    +pseudo
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    top: 50%
+    transform: translateY(-50%)
+    background: $yellow
+
+  &::before
+    left: -7px
+
+  &::after
+    right: -7px
+
+h2
+  text-align: center
+  color: $blue
+  font-size: 48px
+  font-weight: 900
+  line-height: 50px
+
+.services
+  padding: 40px 0 61px
+  background: $bg
+
+  &__header
+    color: $black
+    font-size: 30px
+    font-weight: 700
+    line-height: 60px
+    margin-bottom: 20px
+
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 20px
+
+  &__item
+    width: calc(50% - 15px)
+    background: $w
+    +flex
+    padding: 34px 30px 30px 0
+
+    &-image-part
+      width: 200px
+      +flex
+      justify-content: center
+      align-items: center
+      line-height: 0
+
+      &:hover
+        opacity: .75
+
+    &-text-part
+      width: calc(100% - 200px)
+
+    &-header
+      font-weight: 700
+      margin-bottom: 10px
+
+    &-text
+      margin-bottom: 16px
+
+    &-price
+      
+      &-number
+        margin: 0 16px 0 6px
+
+  &-list
+    margin: -21px auto 0 180px
+
+    &__item
+      line-height: 30px
+      padding-left: 20px
+      position: relative
+
+      &::before
+        +pseudo
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background: $blue
+        top: 10px
+        left: 0
+
+      span
+        font-weight: 700
+
+.master
+  padding: 58px 0 0
+
+  &__inner
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__text-part
+    max-width: 770px
+
+  &__header
+    text-align: left
+    margin-bottom: 2px
+
+  &__subheader
+    font-size: 30px
+    line-height: 60px
+    margin-bottom: 24px
+
+  &__image-part
+    width: 315px
+    line-height: 0
+    margin: -108px 30px 0 0
+
+.manufacturers
+  padding: 58px 0 60px
+  background: $bg
+
+  &__header
+    margin-bottom: 2px
+
+  &__subheader
+    text-align: center
+    font-size: 30px
+    line-height: 60px
+    margin-bottom: 40px
+
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+    mb-30
+
+  &__item
+    background: $w
+    width: 170px
+    border-radius: 3px
+    text-align: center
+    padding-bottom: 15px
+    margin-bottom: 30px
+
+    &-image-part
+      height: 125px
+      +flex
+      justify-content: center
+      align-items: center
+
+    &-text-part
+      color: #b3b7b9
+      font-size: 14px
+      font-weight: 400
+      line-height: 20px
+      
+.benefits
+  padding: 81px 0 76px
+
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__item
+    width: 370px
+    text-align: center
+
+    &-image-part
+      width: 100px
+      height: 100px
+      background: $blue
+      border-radius: 50%
+      +flex
+      justify-content: center
+      align-items: center
+      margin: 0 auto -1px
+
+    &-header
+      font-size: 30px
+      font-weight: 700
+      line-height: 60px
+      margin-bottom: 4px
+
+    &-text
+      text-align: left
+      color: $link
+
+.order
+  padding: 151px 0 140px
+  background: url('../img/bg-order.png') top center no-repeat
+  background-size: cover
+
+  &__header
+    text-align: left
+    color: $black
+    margin-bottom: 59px
+
+  &__inner
+    +flex
+    
+  &__text-part
+    margin: 0 88px 0 auto
+
+  &__button
+    width: 370px
+    height: 60px
+    background: $blue
+    color: $w
+    font-size: 18px
+    font-weight: 700
+    line-height: 60px
+    text-transform: uppercase
+    letter-spacing: 1.35px
+    border-radius: 3px
+
+    &::before, &::after
+      background: $darkblue
+
+.scheme
+  padding: 58px 0 170px
+
+  &__header
+    margin-bottom: 62px
+
+  &-items
+    +flex
+    flex-direction: column
+    justify-content: center
+    margin-bottom: -90px
+    counter-reset: myCounter
+
+  &__item
+    text-align: center
+    margin-bottom: 90px
+    position: relative
+
+    &:last-child
+      margin-bottom: 0
+
+    &::before, &::after
+      +pseudo
+      left: 50%
+      transform: translateX(-50%)
+
+    &::before
+      width: 30px
+      height: 30px
+      background-color: #ffffff
+      border-radius: 50%
+      color: $link
+      font-size: 14px
+      font-weight: 700
+      line-height: 60px
+      text-align: center
+      line-height: 30px
+      top: -10px
+      counter-increment: myCounter
+      content: counter(myCounter)
+
+    &::after
+      top: 100%
+      width: 13px
+      height: 49px
+      background: url('../img/scheme-arrow.png')
+
+    &:last-child::after
+      content: none
+
+    &-image-part
+      width: 170px
+      height: 170px
+      background-color: $bg
+      border-radius: 50%
+      margin: 0 auto 0
+      +flex
+      justify-content: center
+      align-items: center
+
+    &-text-part
+      font-size: 30px
+      line-height: 60px
+      margin-top: -60px
+
+.portfolio
+  padding: 58px 0 73px
+  background: $bg
+
+  &__header
+    margin-bottom: 62px
+
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 43px
+
+  &__item
+    width: 370px
+    border-radius: 3px 3px 0 0
+    overflow: hidden
+
+    &-link
+      line-height: 0
+      display: block
+      position: relative
+      
+      &::after
+        +pseudo
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba($black, .5) url('../img/icon-zoom.svg') no-repeat center
+        opacity: 0
+
+      &:hover::after
+        opacity: 1
+
+    &-image
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 3px 3px 0 0
+
+    &-text
+      background: $w
+      text-align: center
+      padding: 15px 0
+
+    &-price
+      text-align: center
+
+      &-title
+        font-weight: 700
+        margin-right: 6.5px
+      
+      &-number
+        margin-left: 6.5px
+        padding: 0 25px
+        margin-top: 20px
+
+  &__link
+    color: $blue
+    font-size: 30px
+    text-align: center
+    display: block
+
+    span
+      border-bottom: 1px solid rgba($blue, .5)
+      +tr
+
+      &:hover
+        border-color: transparent
+
+    &-wrapper
+      text-align: center
+
+.feedback
+  padding: 58px 0 80px
+  background: url('../img/bg-feedback.png') top center no-repeat
+  background-size: cover
+  color: $w
+
+  &__header
+    color: $w
+    margin-bottom: 17px
+
+  &__subheader
+    font-size: 30px
+    font-weight: 700
+    line-height: 50px
+    text-align: center
+    margin-bottom: 45px
+
+  &-form
+    max-width: 770px
+    margin: auto
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+
+    &__name
+      width: 240px
+
+    &__phone
+      width: 200px
+
+    &__name, &__phone
+      height: 60px
+      background-color: $w
+      line-height: 60px
+      border-radius: 3px
+      padding: 0 20px
+      color: $black
+
+      &::placeholder
+        color: $link
+
+    &__submit
+      width: 270px
+      height: 60px
+      border: 2px solid $w
+      line-height: 56px
+      font-size: 18px
+      font-weight: 700
+      line-height: 50px
+      text-transform: uppercase
+      letter-spacing: 1.35px
+      border-radius: 3px
+      background: none
+
+      &:hover
+        color: $blue
+
+      &::before, &::after
+        background: $w
+
+.main-footer
+
+  &-top
+    padding: 59px 0 40px
+
+    &__inner
+      +flex
+
+  &-bottom
+    background: $bg
+
+    &__inner
+      +flex
+      justify-content: space-between
+
+    p, a
+      line-height: 40px
+      color: $link
+      font-size: 14px
+
+    a
+      text-transform: uppercase
+      border-bottom: 1px solid rgba($link, .4)
+
+      &:hover
+        border-color: transparent
+
+  .logo
+    margin-right: 58px
+
+    &__link
+      display: block
+      margin-bottom: 24px
+
+    &__title
+      color: $blue
+      font-size: 48px
+      margin-bottom: 7px
+
+    &__tagline
+      color: $black
+      font-size: 18px
+      line-height: 20px
+
+  .phones
+    width: 182px
+    margin-left: auto
+
+    &__link
+      color: $black
+      display: inline-block
+
+      &:hover
+        color: $blue
+
+    &__messenger
+      color: $black
+
+      &_whatsapp
+
+        &::before
+          background: url('../img/icon-whatsapp.svg') no-repeat
+
+      &_viber
+
+        &::before
+          background: url('../img/icon-viber.svg') no-repeat
+
+  .callback
+    border-color: $blue
+    color: $blue
+    margin-top: 15px
+
+    &:hover
+      color: $w
+
+.social
+  +flex
+
+  &__item
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    background: $black
+    margin-right: 10px
+    text-align: center
+    line-height: 32px
+    color: $w
+    font-size: 16px
+
+    &::after
+      background: $w
+
+    &.fa-vk
+      background-color: #4d76a1
+
+    &.fa-youtube
+      background-color: #d32322
+
+    &.fa-facebook-f
+      background-color: #3b5998
+
+    &.fa-instagram
+      background-color: #6a453b
+
+    &:last-child
+      margin-right: 0
+
+.footer-menu
+
+  &_01
+    margin-right: 90px
+
+  &__header
+    font-weight: 700
+    line-height: 30px
+    margin-bottom: 11px
+
+  &__inner
+    +flex
+
+  &-items + &-items
+    margin-left: 26px
+
+  &__link
+    color: $link
+    font-size: 14px
+    line-height: 30px
+    border-bottom: 1px solid rgba($link, .4)
+
+    &:hover
+      border-color: transparent
+
+.inner
+
+  .main-content
+    padding: 60px 0 24px
+
+  h1
+    text-align: center
+    font-size: 38px
+    color: $blue
+    line-height: 1.2
+    margin-bottom: 13px
+
+  .subheader
+    text-align: center
+    font-size: 24px
+    margin-bottom: 33px
+
+  h2
+    font-size: 28px
+    color: #000
+    text-align: center
+    margin-bottom: 20px
+    line-height: 1.2
+
+  .manufacturers
+    padding-top: 45px
+
+    &__header
+      margin-bottom: 36px
+
+  .benefits
+    padding: 90px 0 48px
+
+    &__header
+      margin-bottom: 13px
+
+    &__subheader
+      text-align: center
+      font-size: 24px
+      margin-bottom: 32px
+
+    &__item
+
+      &-image-part
+        background: none
+        height: 70px
+        margin: 0 auto -8px
+
+      &-image
+        max-height: 100%
+
+      &-header
+        font-size: 18px
+        margin-bottom: -8px
+
+      &-text
+        color: $black
+
+.team
+  padding: 38px 0 0
+
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-top: 63px
+
+  &__item
+    width: 270px
+    text-align: center
+
+    &-image-part
+      width: 170px
+      height: 170px
+      background-color: #f5f5f5
+      border-radius: 50%
+      margin: 0 auto 13px
+      +flex
+      justify-content: center
+      align-items: flex-end
+
+    &-header
+      font-size: 30px
+      font-weight: 700
+      margin-bottom: 18px
+
+    &-text
+      color: $link
+
+.clients
+  padding: 30px 0 50px
+
+  &__header
+    margin-bottom: 30px !important
+
+  &-items
+    +flex
+    justify-content: space-between
+    align-items: center
+
+  &__item
+    width: 370px
+
+    &-image
+      max-width: 270px
+      max-height: 120px
+      display: block
+      margin: auto
+
+#top
+  line-height: 50px
+  background: $blue
+  text-align: center
+  color: $w
+  bottom: 60px
+
+  &::after
+    background: $w

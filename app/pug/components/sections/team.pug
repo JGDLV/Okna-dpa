@@ -1,0 +1,42 @@
+-
+  var team = [
+    {
+      img: 'img/team-01.png',
+      header: 'Алексей',
+      text: 'Руководитель производственного цеха, сборщик москитных сеток.',
+      experience: 'Опыт работы 5 лет'
+    },
+    {
+      img: 'img/team-02.png',
+      header: 'Андрей',
+      text: 'Технический специалист, инженер сервисной службы.',
+      experience: 'Опыт работы c окнами 10 лет'
+    },
+    {
+      img: 'img/team-03.png',
+      header: 'Ольга',
+      text: 'Специалист<br> по работе с клиентами.',
+      experience: 'Опыт работы 5 лет'
+    },
+    {
+      img: 'img/team-04.png',
+      header: 'Игорь',
+      text: 'Специалист<br> сервисной службы.',
+      experience: 'Работает с окнами 7 лет'
+    }
+  ]
+
+.team
+  .container
+    h2.team__header Сотрудники нашего оконного сервиса
+    p.team__text Все работники прошли обучение по сборке на производстве REHAU, поэтому они знают технологические тонкости изготовления таких конструкций. Ежегодно повышаем квалификацию мастеров по установке фурнитуры и мастер-классы по новым типам продукции. Выдаем каждому специалисту набор инструментов BOSCH.
+    .team-items
+      each item in team
+        .team__item
+          .team__item-image-part
+            img.team__item-image(src=item.img, alt="")
+          .team__item-text-part
+            p.team__item-header !{item.header}
+            p.team__item-text !{item.text}
+            p.team__item-experience !{item.experience}
+// team

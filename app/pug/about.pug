@@ -1,0 +1,17 @@
+extends components/_layout.pug
+
+block variables
+  -
+    var title = 'О компании'
+    var description = 'О компании'
+
+block content
+  .container
+    h1 Компания по ремонту окон OknaDpa
+    p.subheader Восстанавливаем стеклопакеты и профильные конструкции за 1–3 дня
+    p Поможем вам сэкономить на покупке нового стеклопакета: предлагаем услуги оконного сервиса в Москве. Ремонтируем профили, заменяем фурнитуру, регулируем створки. Работаем со всеми типами конструкций: пластиковыми, алюминиевыми, деревянными. При заключении договора бесплатно приедем в любую часть города для замеров и диагностики поломок.
+
+  include components/sections/team.pug
+  include components/sections/benefits-about.pug
+  include components/sections/manufacturers.pug
+  include components/sections/clients.pug

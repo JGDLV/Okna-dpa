@@ -1,0 +1,21 @@
+-
+  const menu = [
+    { href: '#', text: 'Услуги' },
+    { href: 'about.html', text: 'О компании' },
+    { href: '#', text: 'Наши работы' },
+    { href: '#', text: 'Контакты' }
+  ]
+
+.main-header-bottom
+  .container
+    .main-menu
+      .menu-toggle
+        i.icon-toggle
+          span
+          span
+          span
+      ul.main-menu-items
+        each item in menu
+          li.main-menu__item
+            a.main-menu__link(href=item.href)= item.text
+// main-header-bottom

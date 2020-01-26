@@ -1,0 +1,17 @@
+extends components/_layout.pug
+
+block variables
+  -
+    var title = 'Главная страница'
+    var description = 'Главная страница'
+    var index = true
+
+block content
+  include components/sections/services.pug
+  include components/sections/master.pug
+  include components/sections/manufacturers.pug
+  include components/sections/benefits.pug
+  include components/sections/order.pug
+  include components/sections/scheme.pug
+  include components/sections/portfolio.pug
+  include components/sections/feedback.pug

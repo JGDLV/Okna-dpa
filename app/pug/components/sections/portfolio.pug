@@ -1,0 +1,38 @@
+-
+  const portfolio = [
+    {
+      href: 'img/portfolio-01-big.jpg',
+      src: 'img/portfolio-01.png',
+      text: 'Замена фурнитуры <br>на пластиковом окне',
+      price: '5 000',
+    },
+    {
+      href: 'img/portfolio-02-big.jpg',
+      src: 'img/portfolio-02.png',
+      text: 'Ремонт деревянного окна, сложная <br>регулировка 2 створок',
+      price: '4 000',
+    },
+    {
+      href: 'img/portfolio-03-big.jpg',
+      src: 'img/portfolio-03.png',
+      text: 'Замена стеклопакета <br>в арочном окне',
+      price: '8 000',
+    }
+  ]
+
+.portfolio
+  .container
+    h2.portfolio__header Выполнили ремонт окон недорого <br>и быстро на следующих объектах
+    .portfolio-items
+      each item in portfolio
+        .portfolio__item
+          .portfolio__item-image-part
+            a.portfolio__item-link(href=item.href)
+              img.portfolio__item-image(src=item.src alt='')
+          .portfolio__item-text-part
+            p.portfolio__item-text !{item.text}
+            p.portfolio__item-price
+              span.portfolio__item-price-title Стоимость работы
+              span.portfolio__item-price-number.price !{item.price} Р
+    a.portfolio__link(href="#") #[span Посмотреть остальные работы]
+// portfolio

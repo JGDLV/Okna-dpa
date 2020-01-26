@@ -1,0 +1,15 @@
+-
+  var clients = [
+    'img/clients-01.png',
+    'img/clients-02.jpg',
+    'img/clients-03.png'
+  ]
+
+.clients
+  .container
+    h2.clients__header Наши клиенты
+    .clients-items
+      each item in clients
+        .clients__item
+          img.clients__item-image(src=item, alt="")
+// clients
