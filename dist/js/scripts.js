@@ -1,3 +1,10 @@
+function footerFix() {
+  let footerHeight = $('.main-footer').innerHeight();
+  $('body').css('padding-bottom', footerHeight + 'px');
+}
+
+$(window).on('load resize', footerFix);
+
 $(document).ready(function () {
 
   $('form').each(function () {

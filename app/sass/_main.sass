@@ -12,6 +12,7 @@ body
   line-height: calc(20 / 18)
   color: $black
   font-weight: 400
+  +body
 
 .container
   max-width: 1200px
@@ -152,18 +153,18 @@ body
   &-items
     +flex
 
-  &__item
-    flex-grow: 1
+    & > li
+      flex-grow: 1
 
-  &__link
-    display: block
-    text-align: center
-    line-height: 60px
-    color: $w
-    font-size: 24px
-    font-weight: 700
-    position: relative
-    z-index: 10
+      & > a
+        display: block
+        text-align: center
+        line-height: 60px
+        color: $w
+        font-size: 24px
+        font-weight: 700
+        position: relative
+        z-index: 10
 
   &__hover
     position: absolute
@@ -657,6 +658,7 @@ h2
         background: $w
 
 .main-footer
+  +footer
 
   &-top
     padding: 59px 0 40px
@@ -793,6 +795,19 @@ h2
 
   .main-content
     padding: 60px 0 24px
+
+    & > .container
+
+      & > p:not(.subheader)
+        margin: 15px 0
+
+      & > ul
+        list-style: disc
+        margin: 15px 0
+        padding-left: 40px
+
+        li
+          margin: 5px 0
 
   h1
     text-align: center
